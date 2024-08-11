@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block title %}Birthday Mate - Create{% endblock %}
+{% block content %}
+<div class="flex justify-center my-8">
+  <h2 class="text-2xl font-semibold text-gray-800">Add an event</h2>
+</div>
+<form
+  method="POST"
+  action="{{ url_for('create') }}"
+  class="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg"
+>
+  {{ form.hidden_tag() }}
+
+  <div class="mb-4">
+    <label for="title" class="block text-sm font-medium text-gray-700 mb-2"
+      >{{ form.title.label }}</label
+    >
+    {{ form.title(class_="w-full px-4 py-2 border border-gray-300 rounded-lg
+    focus:ring focus:ring-indigo-200") }}
+  </div>
+
+  <div class="mb-4">
+    <label for="content" class="block text-sm font-medium text-gray-700 mb-2"
+      >{{ form.content.label }}</label
+    >
+    {{ form.content(class_="w-full px-4 py-2 border border-gray-300 rounded-lg
+    focus:ring focus:ring-indigo-200") }}
+  </div>
+
+  <div class="mb-4">
+    <label for="month" class="block text-sm font-medium text-gray-700 mb-2"
+      >{{ form.month.label }}</label
+    >
+    {{ form.month(class_="w-full px-4 py-2 border border-gray-300 rounded-lg
+    focus:ring focus:ring-indigo-200") }}
+  </div>
+
+  <div class="mb-4">
+    <label for="day" class="block text-sm font-medium text-gray-700 mb-2"
+      >{{ form.day.label }}</label
+    >
+    {{ form.day(class_="w-full px-4 py-2 border border-gray-300 rounded-lg
+    focus:ring focus:ring-indigo-200") }}
+  </div>
+
+  <div class="mb-4">
+    <label for="year" class="block text-sm font-medium text-gray-700 mb-2"
+      >{{ form.year.label }}</label
+    >
+    {{ form.year(class_="w-full px-4 py-2 border border-gray-300 rounded-lg
+    focus:ring focus:ring-indigo-200") }}
+  </div>
+
+  <div>
+    {{ form.submit(class_="w-full bg-indigo-600 text-white py-2 rounded-lg
+    hover:bg-indigo-700 cursor-pointer") }}
+  </div>
+</form>
+{% endblock %}

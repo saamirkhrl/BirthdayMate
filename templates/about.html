@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %} Birthday Mate - About {% endblock %}
+{% block content %}
+<div class="container mx-auto mt-8 p-4">
+  <h1 class="text-4xl font-bold mb-4">About Us</h1>
+  <hr class="border-t border-gray-300 mb-4" />
+  <p class="text-lg">
+    Welcome to Birthday Mate! Birthday Mate is designed to help you seamlessly
+    create, manage, and organize events, whether it's a birthday,
+    party, graduation, or any other special occasion. You can easily add new
+    events, update existing ones, or delete them as needed. Join our growing community today!
+  </p>
+  <br>
+  <hr class="border-t border-gray-300 mb-4" />
+  <h3 class="text-4xl font-bold mb-4">About the developer</h3>
+  <p class="text-lg">
+    Hey! I'm Samir, the developer of Birthday Mate. I created this app as a side project and hobby. You can find me on <a class="text-blue-500 hover:text-blue-700 font-bold" href="https://www.x.com/samirkharel_" target="_blank">X (Twitter)</a>!
+    I also have a Github account <a class="text-blue-500 hover:text-blue-700 font-bold" href="https://www.github.com/saamirkhrl" target="_blank">here!</a>
+  </p>
+  <p class="text-lg">
+    <br>
+    <hr class="border-t border-gray-300 mb-4" />
+    <a href="{{url_for('login')}}" class="text-blue-500 hover:text-blue-700 font-bold"
+      >Login</a
+    >
+    or
+    <a href="{{url_for('register')}}" class="text-blue-500 hover:text-blue-700 font-bold"
+      >sign up</a
+    >
+    to get started!
+  </p>
+</div>
+{% endblock %}
